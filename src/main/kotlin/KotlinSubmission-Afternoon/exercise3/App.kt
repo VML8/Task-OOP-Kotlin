@@ -18,16 +18,25 @@ fun main() {
     // Buat di bawah sini
     print("Input score: ")
     val score = readLine()!!.toInt()
-    var grade = "A"
-    if (80 <= score && score <= 89) {
-        grade = "B"
+//    var grade = "A"
+    val msg: String
+
+    msg = if (80 <= score && score <= 89) {
+//        grade = "B"
+        "Anda mendapatkan nilai B"
     } else if (70 <= score && score <= 79) {
-        grade = "C"
+//        grade = "C"
+        "Anda mendapatkan nilai C"
     } else if (60 <= score && score <= 69) {
-        grade = "D"
+//        grade = "D"
+        "Anda mendapatkan nilai D"
     } else if (score < 60) {
-        grade = "E"
+//        grade = "E"
+        "Anda mendapatkan nilai E"
+    } else {                                        // Gotta finish with else grade is A because the assignment wants it on variable.
+        "Anda mendapatkan nilai A"
     }
 
-    print("Anda mendapatkan nilai $grade")
+//    print("Anda mendapatkan nilai $grade")        // Whoopsie this should be on the variable...
+    print (msg)
 }
