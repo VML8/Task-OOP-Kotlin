@@ -1,4 +1,4 @@
-package id.infinitelearning.KotlinSubmission.exercise1
+package `KotlinSubmission-Afternoon`.exercise1
 
 /**
 Latihan 1
@@ -10,7 +10,19 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
+    val first_name = "Luqmannul" // was going to use 'firstName' as val name but was taken by kotlin?
+    val last_name = "Hakim" // for consistency, will use snake case for the entire of this file
+    val age = 20
+    val is_not_married = true
 
+    println("First Name: $first_name")
+    println("Last Name: $last_name")
+    println("Age: $age")
+    if (is_not_married) {
+        println("Status : Single")
+    } else {
+        println("Status : Married")
+    }
 }
 
 
@@ -19,6 +31,10 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
+    println("Group ID: $groupId")
+    println("Anggota Kelompok :")
+    println("Sesi: $session")
+    for (item in groupMember) println("- $item")
     return ""
 }
 
@@ -29,8 +45,20 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myTeam(): List<Any> {
-
-    return listOf()
+    // Warning: Local variable used once can be inlined, so I did it *shrugie*
+    return listOf(
+        "Siljinia Heidi Pedati",
+        "Delviya Indra Gani",
+        "Muhammad Naufal Rizky",
+        "Alexander Caisar Simamora",
+        "Aisyah Tsuraya Rafilah",
+        "Muhammad Azmi",
+        "Bilsyakur Akmeison",
+        "Muhammad Ilham",
+        "Luqmannul Hakim",
+        "Jamila Ulfiah",
+        "Yusuf Abiyyu Rahman"
+    )
 }
 
 /**
@@ -41,10 +69,22 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
+    val mentor = arrayOf<String>("Kak Raihan", "Kak Fatih")
+    val countOfGroup = arrayOf<String>(
+        "Siljinia Heidi Pedati",
+        "Delviya Indra Gani",
+        "Muhammad Naufal Rizky",
+        "Alexander Caisar Simamora",
+        "Aisyah Tsuraya Rafilah",
+        "Muhammad Azmi",
+        "Bilsyakur Akmeison",
+        "Muhammad Ilham",
+        "Luqmannul Hakim",
+        "Jamila Ulfiah",
+        "Yusuf Abiyyu Rahman"
+    )
 
-    return 0
+    return mentor.count() + countOfGroup.count()
 }
 
 fun main() {
@@ -62,6 +102,19 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail(
+        "4Keys",
+        listOf("Siljinia Heidi Pedati",
+            "Delviya Indra Gani",
+            "Muhammad Naufal Rizky",
+            "Alexander Caisar Simamora",
+            "Aisyah Tsuraya Rafilah",
+            "Muhammad Azmi",
+            "Bilsyakur Akmeison",
+            "Muhammad Ilham",
+            "Luqmannul Hakim",
+            "Jamila Ulfiah",
+            "Yusuf Abiyyu Rahman"),
+        "Siang")
 
 }
