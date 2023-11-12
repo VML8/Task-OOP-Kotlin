@@ -16,5 +16,18 @@ fun main() {
     - Isi variabel result dengan nilai: 'Anda mendapatkan nilai E.'
      */
     // Buat di bawah sini
+    print("Input score: ")
+    val score = readLine()!!.toInt()
+    var grade = "A"
+    if (80 <= score && score <= 89) {
+        grade = "B"
+    } else if (70 <= score && score <= 79) {
+        grade = "C"
+    } else if (60 <= score && score <= 69) {
+        grade = "D"
+    } else if (score < 60) {
+        grade = "E"
+    }
 
+    print("Anda mendapatkan nilai $grade")
 }
