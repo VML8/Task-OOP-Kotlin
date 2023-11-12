@@ -5,7 +5,7 @@ class Hero {
     private var age = 0
     private var height = 0
 
-    private var health = 20
+    private var stamina = 20 // Changed to stamina becoz it's not a fighting scenario.
 
     fun setProfile(name: String?, age: Int, height: Int) {
         this.name = name
@@ -18,20 +18,50 @@ class Hero {
         println("Name: $name")
         println("Age: $age")
         println("Height: $height")
-        println("Health: $health")
+        println("stamina: $stamina")
         println("===========================")
     }
 
     private fun checkHealth() {
-        if (health <= 0) {
-            println("Anda telah mati $name")
+        if (stamina <= 0) {
+            println("$name telah pingsan.")
         }
     }
 
     fun jalan() {
         checkHealth()
         println("$name sedang berjalan...")
-        health -= 1
+        stamina -= 1
+    }
+
+    fun lari() {
+        checkHealth()
+        println("$name berlari!!!")
+        stamina -= 2
+    }
+
+    fun lompat() {
+        checkHealth()
+        println("$name melakukan sebuah lompatan...")
+        stamina -= 2
+    }
+
+    fun duduk() {
+        checkHealth()
+        println("$name duduk untuk beristirahat sejenak...")
+        stamina += 1
+    }
+
+    fun makan() {
+        checkHealth()
+        println("$name makan untuk memulihkan tenaga.")
+        stamina += 2
+    }
+
+    fun minum() {
+        checkHealth()
+        println("$name minum untuk mengembalikan cairan tubuh.")
+        stamina += 2
     }
 
 
@@ -51,4 +81,3 @@ class Hero {
     */
     
 }
-
